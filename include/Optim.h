@@ -15,7 +15,7 @@ struct SGD : Optimizer
   void step(NeuralNet net)
   {
     for(auto& p : net.params_and_grads())
-      *(p.first) -= xt::eval(lr* (*(p.second)));
+      *(p.first) -= lr* (*(p.second));
   }
   double lr;
 };

@@ -13,7 +13,7 @@ struct NeuralNet
     Tensor res = inputs;
     for(auto layer : layers)
       {
-      res = xt::eval(layer->forward(res));
+      res = layer->forward(res);
       }
     return res;
   }
@@ -25,7 +25,7 @@ struct NeuralNet
     auto end = layers.rend();
     while(iter != end)
       {
-      res = xt::eval((*iter)->backward(res));
+      res = (*iter)->backward(res);
       ++iter;
       }
 

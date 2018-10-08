@@ -13,11 +13,11 @@ struct MSE : Loss
 {
   double loss(const Tensor& predicted, const Tensor& actual) override
   {
-    return xt::eval(xt::sum(xt::square(predicted - actual)))[0];
+    return xt::sum(xt::square(predicted - actual))[0];
   }
   Tensor grad(const Tensor& predicted, const Tensor& actual) override
   {
-    return xt::eval(2 * (predicted - actual));
+    return 2 * (predicted - actual);
   }
   };
 #endif

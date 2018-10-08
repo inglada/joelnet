@@ -33,8 +33,8 @@ struct BatchIterator : DataIterator
     if(inputs_length < batch_size) batch_size = inputs_length;
     assert(static_cast<int>(inputs.shape()[0]) >=
            static_cast<int>(batch_size));
-    auto starts = xt::eval(xt::arange(0, inputs_length,
-                                      static_cast<int>(batch_size)));
+    Tensor starts = xt::arange(0, inputs_length,
+                                      static_cast<int>(batch_size));
     if(shuffle)
          {
          xt::random::shuffle(starts);

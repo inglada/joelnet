@@ -1,6 +1,6 @@
-add_executable(joelnet joelnet.cxx )
-target_link_libraries(joelnet ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES})
+add_executable(xor xor.cxx )
+target_link_libraries(xor ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES})
 
-add_test(joelnet ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/joelnet)
+add_test(xor ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/xor)
 
 

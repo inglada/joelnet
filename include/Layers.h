@@ -58,7 +58,7 @@ struct Activation : Layer
 };
 
 
-struct tanh_l 
+struct tanh_f 
 {
   Tensor operator()  (const Tensor& x)
   {
@@ -66,7 +66,7 @@ struct tanh_l
   }
 }  ;
 
-struct tanh_prime_l
+struct tanh_prime_f
 {
   Tensor operator()  (const Tensor& x)
   {
@@ -75,6 +75,6 @@ struct tanh_prime_l
   }
 }  ;
 
-using Tanh = Activation<tanh_l,tanh_prime_l>;
+using Tanh = Activation<tanh_f,tanh_prime_f>;
 
 #endif

@@ -1,8 +1,8 @@
 #include <cstdlib>
 #include "Train.h"
 
-
-void Xor()
+using namespace joelnet;
+int main()
 {
   auto inputs = Tensor({
       {0, 0},
@@ -25,11 +25,6 @@ void Xor()
   train(net, inputs, targets);
   auto predicted = net.forward(inputs);
   std::cout << predicted;
-}
 
-
-int main()
-{
-   Xor();
-   return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }

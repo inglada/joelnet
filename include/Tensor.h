@@ -7,6 +7,9 @@
 #include "xtensor/xbuilder.hpp"
 #include "xtensor/xsort.hpp"
 
+namespace joelnet
+{
 //A tensor is just a n-dimensional array
 using Tensor = xt::xarray<double>;
+}
 #endif

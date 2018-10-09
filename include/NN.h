@@ -5,6 +5,13 @@
 #include "Layers.h"
 #include <vector>
 
+namespace joelnet
+{
+/**
+A NeuralNet is just a collection of layers.
+It behaves a lot like a layer itself, although
+we're not going to make it one.
+*/
 struct NeuralNet
 {
   NeuralNet(std::initializer_list<Layer*>&& layers) : layers{layers} {};
@@ -46,5 +53,5 @@ struct NeuralNet
   std::vector<Layer*> layers;
 
 };
-
+}
 #endif

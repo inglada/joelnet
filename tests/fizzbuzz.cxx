@@ -1,6 +1,8 @@
 #include <cstdlib>
 #include "Train.h"
 
+using namespace joelnet;
+
 xt::xarray<int> fizz_buzz_encode(int x)
 {
   if(x%15 == 0) return xt::xarray<int>{0, 0, 0, 1};

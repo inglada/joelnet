@@ -1,9 +1,15 @@
 #ifndef DATA_H
 #define DATA_H
+/**
+We'll feed inputs into our network in batches.
+So here are some tools for iterating over data in batches.
+*/
 
 #include "Tensor.h"
 #include <algorithm>
 
+namespace joelnet
+{
 struct Batch
 {
   Tensor input_batch;
@@ -58,4 +64,5 @@ struct BatchIterator : DataIterator
   bool shuffle;
   size_t current_start = 0;
 };
+}
 #endif

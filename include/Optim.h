@@ -3,6 +3,13 @@
 
 #include "NN.h"
 
+namespace joelnet
+{
+/**
+We use an optimizer to adjust the parameters
+of our network based on the gradients computed
+during backpropagation
+*/
 struct Optimizer
 {
   virtual void step(NeuralNet net) = 0;
@@ -18,5 +25,7 @@ struct SGD : Optimizer
       *(p.first) -= lr* (*(p.second));
   }
   double lr;
+
 };
+}
 #endif

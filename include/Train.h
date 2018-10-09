@@ -7,6 +7,9 @@
 #include "Optim.h"
 #include "Data.h"
 
+namespace joelnet
+{
+//Here's a function that can train a neural net
 void train(NeuralNet& net, Tensor& inputs, Tensor& targets, int num_epochs = 5000,
            DataIterator* iterator = new BatchIterator{}, Loss* loss = new MSE{}, 
            Optimizer* optimizer = new SGD{})
@@ -27,5 +30,6 @@ void train(NeuralNet& net, Tensor& inputs, Tensor& targets, int num_epochs = 500
       }
     std::cout << epoch << '\t' << epoch_loss << '\n';
     }
+}
 }
 #endif

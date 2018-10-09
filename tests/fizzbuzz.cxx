@@ -1,14 +1,5 @@
 #include <cstdlib>
-#include "Tensor.h"
-#include "Layers.h"
-#include "Loss.h"
-#include "NN.h"
-#include "Optim.h"
-#include "Data.h"
 #include "Train.h"
-#include "xtensor/xview.hpp"
-#include "xtensor/xbuilder.hpp"
-#include "xtensor/xsort.hpp"
 
 xt::xarray<int> fizz_buzz_encode(int x)
 {

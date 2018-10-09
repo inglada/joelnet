@@ -2,8 +2,6 @@
 #define LAYERS_H
 #include "Tensor.h"
 #include <map>
-#include "xtensor/xrandom.hpp"
-#include "xtensor-blas/xlinalg.hpp"
 
 struct Layer
 {
